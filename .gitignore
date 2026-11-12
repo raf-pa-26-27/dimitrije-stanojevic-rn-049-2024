@@ -1,0 +1,13 @@
+# Zadaci / assignment PDFs – ne treba da idu na GitHub
+Postavka*.pdf
+
+# Python
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+
+# Sistem
+.DS_Store
+Thumbs.db

@@ -21,7 +21,6 @@ def get_blosum_distance(seq1, seq2):
 def oceni(seq):
     player_seq = seq.upper().strip()
 
-    # Absolute exact match intercept
     for name, data in PARETO_ANCHORS.items():
         if seq == data["seq"]:
             return data["stats"]
@@ -37,7 +36,6 @@ def oceni(seq):
 
         if dist < 0.001: dist = 0.001
 
-        # High power IDW cleanly blends neighboring nodes
         weight = 1.0 / (dist ** 4)
         total_weight += weight
 
@@ -49,9 +47,6 @@ def oceni(seq):
     s = s_sum / total_weight
     e = e_sum / total_weight
 
-    # THE CORRECTION: Apply an exponential decay multiplier based on distance.
-    # Moving away from exact anchor landmarks instantly scales numbers downward.
-    # A single mutation away from Wuhan scales the output directly toward zero.
     decay_strictness = 8.0
     viability_decay = math.exp(-decay_strictness * min_distance)
 
@@ -61,9 +56,6 @@ def oceni(seq):
 
     return min(10.0, round(t, 2)), min(10.0, round(s, 2)), min(10.0, round(e, 2))
 
-# --- CLEAN TESTING EXAMPLES ---
-# Exact match works cleanly
 print("Pure Delta Profile:", oceni("TEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTN"))
 
-# Chaotic broken sequence naturally drops to zero via the viability decay multiplier
 print("Biologically Broken (RWRW...):", oceni("RWRWRWRWRWRWRWRWRWRWRWRWRWRWRWRW"))

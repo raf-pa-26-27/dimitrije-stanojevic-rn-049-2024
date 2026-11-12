@@ -1,0 +1,83 @@
+{
+ "naslov": "P1 — sekvencijalna pretraga (seme 42)",
+ "parametri": {
+  "B": 150,
+  "N": 20,
+  "k": 4,
+  "M": 10,
+  "lambda": 2.0,
+  "seme": 42,
+  "T": 1,
+  "P": 1,
+  "G": 100
+ },
+ "stat": {
+  "ukupno_trajanje_s": 0.043,
+  "prosecna_iteracija_s": 0.003,
+  "broj_iteracija": 13,
+  "evaluacije": 150,
+  "poslato": 0,
+  "primljeno": 0,
+  "primljeno_odbaceno": 0
+ },
+ "hipervolumen": 0.024485662000000002,
+ "velicina_arhive": 7,
+ "arhiva": [
+  [
+   "TEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTN",
+   [
+    1.0,
+    4.0,
+    1.0
+   ]
+  ],
+  [
+   "TEIYQAGSTPCKGVEGYNCYFPLQSYGFQPTN",
+   [
+    1.04,
+    3.12,
+    0.92
+   ]
+  ],
+  [
+   "TEIYQAGSTPCNGVEGFNCYFPLQPYGFQPTI",
+   [
+    1.34,
+    2.94,
+    1.18
+   ]
+  ],
+  [
+   "TEIYQAGSTPCNGVEGFNCYFPLTSYGFQPTS",
+   [
+    1.15,
+    3.01,
+    1.02
+   ]
+  ],
+  [
+   "TEIYQAGSTPCNGVEGFNCYFPLQPYGFQPTN",
+   [
+    1.03,
+    3.22,
+    0.93
+   ]
+  ],
+  [
+   "TEIYQAGSTPCNGCEGFNCYFPLQSYGFQPTN",
+   [
+    1.07,
+    3.08,
+    0.95
+   ]
+  ],
+  [
+   "TEIYQAGSPPCNGVEGFNCYFPLQSYGTQPTN",
+   [
+    1.35,
+    2.99,
+    1.05
+   ]
+  ]
+ ]
+}
